@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import logoRouen from '../images/logorouen.png'
 function Navbar() {
   return (
@@ -9,17 +10,19 @@ function Navbar() {
     <img src={logoRouen} alt='logo univ'/>
   </a>
 
-  <ul className="flex items-center space-x-2 text-sm font-medium text-gray-500">
-    <li className="hidden lg:block">
-      <a className="px-3 py-2 rounded-lg" href="/"> Home </a>
-    </li>
+  <div className="flex items-center space-x-2 text-sm font-medium text-gray-500">
+    <div className="hidden lg:block">
+      <Link  to="/article" className="px-3 py-2 rounded-lg" href="/"> 
+        Article 
+       </Link>
+    </div>
 
-    <li><a className="px-3 py-2 rounded-lg" href=""> Projects </a></li>
-
-    <li>
-    
-    </li>
-  </ul>
+    <div className="hidden lg:block">
+      <Link  to="/help" className="px-3 py-2 rounded-lg" href="/"> 
+           help
+       </Link>
+    </div>
+  </div>
 </nav>
 
     </>
